@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&family=Ubuntu&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #fff;
+  z-index: 100;
+  transition: all 0.4s ease;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+
+.sidebar.close{
+  width: 60px;
+}
+
+.sidebar.close .gambar-logo #btn {
+  position: absolute;
+  color: #111;
+  left: 50%;
+  top: 10px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-44%);
+  cursor: pointer;
+}
+
+.sidebar .gambar-logo #btn {
+  left: 80%;
+  color: #111;
+  width: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.sidebar .gambar-logo{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 7px 10px;
+}
+
+.sidebar.close .gambar-logo img {
+  display: none;
+}
+
+.sidebar .gambar-logo .nama-logo{
+  font-size: 22px;
+  color: #111;
+  overflow: auto;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.sidebar.close .gambar-logo .nama-logo{
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links{
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+}
+
+.sidebar.close .nav-links{
+  overflow: visible;
+}
+
+.sidebar .nav-links::-webkit-scrollbar{
+  display: none;
+}
+
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  padding-left: 3px;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover{
+  background: #fff;
+}
+
+.sidebar .nav-links li .icon-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .icon-link{
+  display: block
+}
+
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 58px;
+  text-align: center;
+  line-height: 50px;
+  color: #111;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li.showMenu i.arrow{
+  transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.arrow{
+  display: none;
+}
+
+.sidebar .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name{
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .icon-link .link_name{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar.close .nav-links li a .link_name{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li .sub-menu{
+  padding: 6px 6px 14px 50px;
+  margin-top: -10px;
+  background: #fff;
+  display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu{
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu a{
+  color: #111;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover{
+  opacity: 1;
+  color: #111;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu .link_name{
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name{
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar .nav-links .sub-menu .sub-menu2 div {
+  display: flex;
+}
+
+.sidebar .nav-links .sub-menu .sub-menu2 div a {
+  width: 60%;
+}
+
+/* ==================== AKHIR SIDEBAR ==================== */
+
+/* ==================== CONTAINER ====================*/
+.full-container {
+  width: 100%;
+	height: 100%;	
+	padding-left: 60px;
+	background: #F7F7F9;
+}
+
+/* ==================== LANDPAGE SIJA ====================*/
+.landpage-sija {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background: #FFF;
+	box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+
+.landpage-sija .area-ilustrasi-pertanyaan {
+	width: 55%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.landpage-sija .area-ilustrasi-pertanyaan .ilustrasi-pertanyaan {
+	width: 100%;
+	height: 70%;
+}
+
+.ilustrasi-pertanyaan img {
+	width: 100%;
+}
+
+.landpage-sija .area-btn-selanjutnya {
+	width: 45%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.landpage-sija .area-btn-selanjutnya .btn-selanjutnya {
+	width: 100%;
+	height: 70%;
+	padding: 20px;
+}
+
+.btn-selanjutnya .btn {
+	width: 100%;
+	padding: 10px 100px;
+}
+
+.btn-selanjutnya .btn ul {
+	list-style: none;
+}
+
+.btn-selanjutnya .btn ul li {
+	width: 100%;
+	background: #012931;
+	padding: 20px;
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
+	transition: all 0.5s;
+}
+
+.btn-selanjutnya .btn ul a {
+	text-decoration: none;
+	color: #1CC9C5;
+}
+
+.btn-selanjutnya .btn li:hover {
+	background: #003641;
+}
+
+.landpage-sija .area-btn-selanjutnya .judul-pertanyaan {
+	width: 100%;
+	padding: 30px 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 35px;
+	font-weight: bold;
+	color: #003641;
+	display: flex;
+	justify-content: center;
+}
+
+/* ==================== GURU PAGE ====================*/
+.guru {
+	width: 1150px;
+	height: 170vh;
+	margin: 20px auto ;
+	background: #fff;
+	box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18); 
+	border-radius: 20px;
+}
+
+.guru .area-card_guru {
+	width: 100%;
+	height: 150vh;
+}
+
+.guru .area-card_guru .judul-guru {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 10px 20px;
+	font-size: 39px;
+	font-weight: bold;	
+}
+
+.guru .area-card_guru .grouping-card_guru {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.grouping-card_guru .card-guru {
+	width: 300px;
+	height: 450px;
+	margin: 15px 10px;
+	background: #fff;
+	border: 2px solid #ddd;
+}
+
+.grouping-card_guru .card-guru .img-guru {
+	width: 100%;
+	height: 100%;
+}
+
+.img-guru img {
+	width: 100%;
+}
+
+.grouping-card_guru .card-guru .grouping-nama-guru {
+	width: 100%;
+	margin-top: -220px;
+	font-size: 17px;
+}
+
+.grouping-card_guru .card-guru .grouping-nama-guru .nama-guru {
+	padding-left: 13px;
+	font-weight: bold;
+	font-size: 19px;
+	color: #fff;
+	text-shadow: 1px 1px 3px #111;
+}
+
+.grouping-nama-guru .subnama-daftar-mapel {
+	width: 100%;
+	padding: 6px 0;
+	display: flex;
+	justify-content: center;
+	color: #fff;
+	text-shadow: 1px 1px 3px #111;
+}
+
+.grouping-card_guru .grouping-mapel {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.grouping-card_guru .mapel-guru {
+	width: 100%;
+	height: 100px;
+	background: #fff;
+}
+
+.grouping-nama-guru .mapel-guru div {
+	padding: 10px 0;
+	margin: 5px 10px;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	color: #1CC9C5;
+	background: #012931;
+	border-radius: 6px;
+}
+
+/* ==================== AKHIR GURU PAGE ====================*/
+
+/* ==================== DAFTAR MAPEL PAGE ====================*/
+.section-daftar-mapel {
+	width: 1150px;
+	height: 120vh;
+	margin: 20px auto ;
+	background: #fff;
+	box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+	border-radius: 20px;
+}
+
+.section-daftar-mapel .area-daftar-mapel {
+	width: 100%;
+	height: 150vh;
+}
+
+.section-daftar-mapel .judul-daftar-mapel {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 10px 20px;
+	font-size: 39px;
+	font-weight: bold;	
+}
+
+.daftar-mapel {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+.daftar-mapel .area-card-daftar-mapel {
+	width: 1000px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+.daftar-mapel .area-card-daftar-mapel .card-holder {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	height: 100%;
+	background: fff;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.daftar-mapel .area-card-daftar-mapel .card {
+	width: 300px;
+	background-color: #fff;
+	color: #000;
+	margin: 0 7px;
+	border-radius: 10px;
+	box-shadow: 0 0 7px #ccc;
+}
+
+.daftar-mapel .area-card-daftar-mapel .card__img {
+	width: 100%;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+	background: #012931;
+}
+
+.card__img img {
+	width: 100%;
+	height: 100px;
+}
+
+.card-contents {
+	padding: 16px;
+}
+
+.card-contents h1 {
+	font-size: 17px;
+	letter-spacing: 1px;
+}
+
+.card-contents .p {
+	font-size: 15px;
+	padding: 5px 0;
+}
+
+.card__read-more {
+	display: block;
+	opacity: 0;
+	height: 0;
+	transition: all 0.5s;
+}
+
+.card__read-more--open {
+	display: block;
+	opacity: 1;
+	height: 17rem;
+	width: 265px;
+}
+
+.read-more-btn {
+	display: inline-block;
+	color: #012931;
+	background: #fff;
+	border: solid 1px #012931;
+	padding: 0.6rem 94px;
+	font-size: 1em;
+	position: relative;
+	z-index: 1;
+	transition: all 0.5s;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.read-more-btn:hover {
+	color: #1CC9C5;
+	background: #012931;
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0, 1);
+	padding: 0.6rem 94px;
+}
+/* ==================== AKHIR DAFTAR MAPEL PAGE ====================*/
+
+/* ==================== MURID PAGE ==================== */
+/*------------------      SIJA      --------------------------*/
+.section-murid {
+	width: 1150px;
+	height: 100%;
+	padding: 20px;
+	margin: auto;
+	margin-bottom: 40px;
+	background: #fff;
+	box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+	border-radius: 20px;
+}
+
+.card-sija .murid .sija-konten {
+  text-align: center;
+}
+.card-sija .murid .sija-konten h1 {
+  margin: 10px;
+  font-family: 'Ubuntu', sans-serif;
+	padding: 10px 20px;
+	font-size: 39px;
+	font-weight: bold;
+}
+
+.card-sija .murid .daftar-murid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-sija .murid .daftar-murid table {
+  width: 500px;
+  height: 20px;
+  margin: 20px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 13px;
+}
+.card-sija .murid .daftar-murid table thead th {
+  padding: 5px 8px;
+  border: 1px solid #000;
+  background: #012931;
+	color: #1CC9C5;
+}
+.card-sija .murid .daftar-murid table thead td {
+  padding: 5px 8px;
+  border: 1px solid #000;
+  font-weight: bold;
+}
+.card-sija .murid .daftar-murid table tbody th {
+  font-weight: 1;
+  border: 1px solid #000;
+}
+.card-sija .murid .daftar-murid table tbody td {
+  padding: 5px 8px;
+  text-align: left;
+  border: 1px solid #000;
+}
+/* ==================== PRESTASI PAGE ====================*/
+.section-prestasi {
+	width: 1150px;
+	height: 5920px;
+	padding: 20px;
+	margin: auto;
+	margin-bottom: 40px;
+	background: #fff;
+	box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+	border-radius: 20px;
+}
+
+.section-prestasi .area-prestasi {
+	width: 100%;
+	height: 150vh;
+}
+
+.section-prestasi .judul-prestasi {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 10px 20px;
+	font-size: 39px;
+	font-weight: bold;	
+}
+
+.section-prestasi .konten-prestasi {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 13px;
+	padding: 0 10px;
+}
+
+.konten-prestasi table {
+	border-collapse: collapse;
+	background-color: #fff;
+}
+
+.konten-prestasi .tahun {
+	width: 100%;
+	margin-top: 20px;
+	padding: 10px 0;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+}
+.konten-prestasi table tr td li {
+	list-style-type: decimal;
+}
+
+.konten-prestasi table tr .judul-tabel {
+	background: #012931;
+	color: #1CC9C5;
+}
+
+.konten-prestasi table tr td {
+	border: 1px solid #000;
+	padding: 5px 8px;
+}
+
+
+
+
+
+/* ==================== AKHIR PRESTASI PAGE ====================*/
+
+/* ==================== FOOTER ==================== */
+.footer-section {
+	width: 100%;
+	height: 70vh;
+	background: #012931;
+	color: #FFF;
+	z-index: 10;
+}
+
+.judul-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0 10px 0;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+}
+
+.footer {
+	width: 100%;
+	height: 30vh;
+	color: #1CC9C5;
+	padding: 20px 10px;
+}
+
+.footer .alamat {
+	width: 100%;
+	display: flex;
+	padding-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.footer .alamat .isi-alamat {
+	width: 550px;
+	height: 60px;
+}
+
+.footer .keterangan {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	margin-top: 20px;
+}
+
+.footer .keterangan .ket {
+	width: 100%;
+	height: 26vh;
+	display: flex;
+	justify-content: center;
+	text-align: left;
+	margin-left: -20px;
+}
+
+.ket ul {
+	list-style: none;
+}
+
+.ket ul span {
+	margin-right: 5px;
+}
+
+.ket .sub-title-footer {
+	font-size: 19px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.footer .copyright {
+	width: 100%;
+	height: 105px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	padding: 15px 0 10px 0;
+}
+
+.footer .copyright a {
+	color: #fff;
+	text-decoration: none;
+}
+/* ==================== AKHIR FOOTER ==================== */

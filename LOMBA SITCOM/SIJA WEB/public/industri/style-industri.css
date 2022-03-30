@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&family=Ubuntu&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #fff;
+  z-index: 100;
+  transition: all 0.4s ease;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+}
+
+.sidebar.close{
+  width: 60px;
+}
+
+.sidebar.close .gambar-logo #btn {
+  position: absolute;
+  color: #111;
+  left: 50%;
+  top: 10px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-44%);
+  cursor: pointer;
+}
+
+.sidebar .gambar-logo #btn {
+  left: 80%;
+  color: #111;
+  width: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.sidebar .gambar-logo{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 7px 10px;
+}
+
+.sidebar.close .gambar-logo img {
+  display: none;
+}
+
+.sidebar .gambar-logo .nama-logo{
+  font-size: 22px;
+  color: #111;
+  overflow: auto;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.sidebar.close .gambar-logo .nama-logo{
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links{
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+}
+
+.sidebar.close .nav-links{
+  overflow: visible;
+}
+
+.sidebar .nav-links::-webkit-scrollbar{
+  display: none;
+}
+
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  padding-left: 3px;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover{
+  background: #fff;
+}
+
+.sidebar .nav-links li .icon-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .icon-link{
+  display: block
+}
+
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 58px;
+  text-align: center;
+  line-height: 50px;
+  color: #111;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li.showMenu i.arrow{
+  transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.arrow{
+  display: none;
+}
+
+.sidebar .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name{
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .icon-link .link_name{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar.close .nav-links li a .link_name{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li .sub-menu{
+  padding: 6px 6px 14px 50px;
+  margin-top: -10px;
+  background: #fff;
+  display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu{
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu a{
+  color: #111;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover{
+  opacity: 1;
+  color: #111;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu .link_name{
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name{
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar .nav-links .sub-menu .sub-menu2 div {
+  display: flex;
+}
+
+.sidebar .nav-links .sub-menu .sub-menu2 div a {
+  width: 60%;
+}
+
+/* ==================== AKHIR SIDEBAR ==================== */
+
+/* ==================== INDUSTRI ==================== */
+  .industri {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f9;
+  }
+
+  .industri .landpage {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin-left: 58px;
+    justify-content: center;
+    background-color: #fff;
+    padding-right: 58px;
+    font-size: 18px;
+  }
+
+  .industri .landpage .gambar-industri {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .industri .gambar-industri img {
+    width: 500px;
+  }
+
+  .industri .right-side {
+    width: 40%;
+    display: flex;
+    font-size: 24px;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .industri .right-side span {
+    margin-top: 20px;
+  }
+  .industri .right-side hr {
+    width: 80%;
+  }
+  .industri .right-side span a {
+    text-decoration: none;
+  }
+
+  .industri .area-card-industri {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .industri .area-card-industri .container-card-industri {
+    width: 1150px;
+    height: 100%;
+    background: #fff;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    padding: 20px 0;
+  }
+
+  .industri .area-card-industri .container-card-industri .grouping-card-industri {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    margin-left: 33px;
+  }
+
+  .industri .isi-industri {
+    padding: 10px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .industri .isi-industri .judul-industri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 39px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #111;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+  }
+
+  .industri .isi-industri .card-industri {
+    margin: 20px;
+    border: 1px solid #ddd;
+    height: 610px;
+    min-height: 400px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    display: flex;
+    width: 320px;
+  }
+
+  .card-industri .img-industri {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .industri .isi-industri .card-industri .img-industri img {
+    width: 280px;
+    height: 210px;
+  }
+
+  .card-industri .img-industri-qlue {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2291eb;
+    border-radius: 10px 10px 0 0;
+  }
+  .industri .isi-industri .card-industri .img-industri-qlue img {
+    width: 270px;
+    height: 210px;
+  }
+
+  .industri .isi-industri .card-industri .nama-pt {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 8px 13px;
+  }
+
+  .card-industri hr {
+    width: 88%;
+    height: 1px;
+    border: 1px solid #000;
+  }
+
+  .industri .isi-industri .card-industri h1 {
+    width: 100%;
+  }
+
+  .industri .isi-industri .card-industri .pengertian {
+    width: 100%;
+    height: 265px;
+    overflow: hidden;
+  }
+  .industri .isi-industri .card-industri .pengertian p {
+    padding: 15px 13px;
+    font-size: 15px;
+  }
+
+  .industri .isi-industri .card-industri .arrow-kanan {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5px 20px 0  0;
+    border-radius: 20px;
+  }
+
+  .industri .isi-industri .card-industri .arrow-kanan a svg {
+    width: 32px;
+    position: relative;
+  }
+
+/* ==================== AKHIR INDUSTRI ==================== */
+
+/* ==================== FOOTER ==================== */
+.footer-section {
+  width: 100%;
+  height: 70vh;
+  background: #012931;
+  color: #FFF;
+  z-index: 10;
+  padding-left: 60px;
+}
+
+.judul-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 10px 0;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  height: 30vh;
+  color: #1CC9C5;
+  padding: 20px 10px;
+}
+
+.footer .alamat {
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer .alamat .isi-alamat {
+  width: 550px;
+  height: 60px;
+}
+
+.footer .keterangan {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer .keterangan .ket {
+  width: 100%;
+  height: 26vh;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin-left: -20px;
+}
+
+.ket ul {
+  list-style: none;
+}
+
+.ket ul span {
+  margin-right: 5px;
+}
+
+.ket .sub-title-footer {
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer .copyright {
+  width: 100%;
+  height: 105px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 15px 0 10px 0;
+}
+
+.footer .copyright a {
+  color: #fff;
+  text-decoration: none;
+}
+/* ==================== AKHIR FOOTER ==================== */
